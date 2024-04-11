@@ -1,0 +1,47 @@
+function f(n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return n=n*f(n-1)
+    
+    }
+}
+
+
+console.log(f(5)); 
+
+const f=(n)=> {
+    if (n <= 1) {
+        return n;
+    } else {
+        return f(n-1)+f(n-2)
+    
+    }
+}
+
+
+console.log(f(8)) 
+
+const f=(n) =>{
+    if (n==0) {
+        return 0;
+    } else {
+        return (n % 10) + f(Math.floor(n / 10));
+    }
+}
+
+
+console.log(f(721))
+
+
+
+const  power=(x, y)=> {
+    if (y === 0) {
+        return 1;
+    } else {
+        return x * power(x, y - 1);
+    }
+}
+
+
+console.log(power(4, 3));
