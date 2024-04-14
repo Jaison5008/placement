@@ -1,0 +1,92 @@
+const num=(x,y)=>{ 
+ let dub={}     
+ let ori=[] 
+ for (let i=0;i<x.length;i++){ 
+     dub[x[i]]=true
+}
+ for (let j=0;j<y.length;j++){ 
+  if(dub[y[j]]){  
+      ori.push(y[j]) 
+      dub[y[j]]=false
+  }
+     
+ } 
+     
+     return ori
+     
+ } 
+ 
+ 
+ console.log(num([4,5,6,7,8,4],[5,6,7,2,8 ])) 
+
+
+
+const num=(x)=>{ 
+  let start= 0 
+  let end=x.length-1 
+  while(start<end){ 
+    let temp=x[start] ;
+      x[start]=x[end]; 
+      x[end]=temp; 
+      start++; 
+      end--;
+  }
+    
+    return x
+    
+} 
+
+console.log(num([3,4,5,6,7,8])) 
+
+
+
+const num=(x)=>{ 
+ let y={} 
+ let dubli=[] 
+ for(let i=0;i<x.length;i++){ 
+     if(y[x[i]]==undefined){ 
+         dubli.push(x[i]) 
+         y[x[i]]=true
+     }
+ } 
+ return dubli
+} 
+
+console.log(num([3,4,5,6,7,8,3,4,5,3])) 
+
+
+
+const  Arrays=(arr1, arr2)=> {
+    const mergedArray = [];
+    let i = 0, j = 0;
+
+    while (i < arr1.length && j < arr2.length) {
+        if (arr1[i] <= arr2[j]) {
+            mergedArray.push(arr1[i]);
+            i++;
+        } else {
+            mergedArray.push(arr2[j]);
+            j++;
+        }
+    }
+
+
+    while (i < arr1.length) {
+        mergedArray.push(arr1[i]);
+        i++;
+    }
+
+   
+    while (j < arr2.length) {
+        mergedArray.push(arr2[j]);
+        j++;
+    }
+
+    return mergedArray;
+}
+
+
+const merged = Arrays([1,2,3,7,8],[4,5,6,9,10]);
+console.log(merged); 
+
+
